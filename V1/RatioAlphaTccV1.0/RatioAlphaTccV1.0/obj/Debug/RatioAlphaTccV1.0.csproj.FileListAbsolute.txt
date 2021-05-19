@@ -1,0 +1,11 @@
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\bin\Debug\RatioAlphaTccV1.0.exe.config
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\bin\Debug\RatioAlphaTccV1.0.exe
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\bin\Debug\RatioAlphaTccV1.0.pdb
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1.0.csprojAssemblyReference.cache
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1._0.Properties.Resources.resources
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1._0.Splash.resources
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1.0.csproj.GenerateResource.cache
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1.0.csproj.CoreCompileInputs.cache
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1.0.exe
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1.0.pdb
+E:\Tcc\C\V1\RatioAlphaTccV1.0\RatioAlphaTccV1.0\obj\Debug\RatioAlphaTccV1._0.frmLogin.resources
