@@ -76,5 +76,10 @@ namespace RatioAlphaTccV1._0
                 txtSenha.UseSystemPasswordChar = false;
             }
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

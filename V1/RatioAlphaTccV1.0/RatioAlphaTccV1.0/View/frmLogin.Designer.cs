@@ -30,7 +30,6 @@
         {
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.cbLembrar = new System.Windows.Forms.CheckBox();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCadastro = new System.Windows.Forms.Button();
@@ -63,17 +62,6 @@
             this.txtSenha.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtSenha_MouseClick);
             this.txtSenha.MouseLeave += new System.EventHandler(this.txtSenha_MouseLeave);
             // 
-            // cbLembrar
-            // 
-            this.cbLembrar.AutoSize = true;
-            this.cbLembrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
-            this.cbLembrar.Location = new System.Drawing.Point(81, 126);
-            this.cbLembrar.Name = "cbLembrar";
-            this.cbLembrar.Size = new System.Drawing.Size(100, 17);
-            this.cbLembrar.TabIndex = 2;
-            this.cbLembrar.Text = "Lembrar de mim";
-            this.cbLembrar.UseVisualStyleBackColor = true;
-            // 
             // btnMostrar
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.Transparent;
@@ -102,6 +90,7 @@
             this.btnLogin.TabIndex = 10;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnCadastro
             // 
@@ -141,7 +130,6 @@
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnMostrar);
-            this.Controls.Add(this.cbLembrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -157,7 +145,6 @@
 
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.CheckBox cbLembrar;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnCadastro;

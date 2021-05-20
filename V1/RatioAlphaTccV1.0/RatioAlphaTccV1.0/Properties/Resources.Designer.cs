@@ -63,6 +63,16 @@ namespace RatioAlphaTccV1._0.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Progama {
+            get {
+                object obj = ResourceManager.GetObject("Logo_Progama", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_transparente {
             get {
                 object obj = ResourceManager.GetObject("Logo_transparente", resourceCulture);
