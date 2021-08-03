@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RatioAlphaTccV1._0.Properties {
+namespace TccRatioAlpha.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace RatioAlphaTccV1._0.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RatioAlphaTccV1._0.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TccRatioAlpha.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace RatioAlphaTccV1._0.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ezgif_4_6d24f6d97612 {
+        internal static System.Drawing.Bitmap btn_Login {
             get {
-                object obj = ResourceManager.GetObject("ezgif-4-6d24f6d97612", resourceCulture);
+                object obj = ResourceManager.GetObject("btn_Login", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace RatioAlphaTccV1._0.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo_animada_shhhhhh {
+        internal static System.Drawing.Bitmap ezgif_4_6d24f6d97612 {
             get {
-                object obj = ResourceManager.GetObject("logo-animada-shhhhhh", resourceCulture);
+                object obj = ResourceManager.GetObject("ezgif-4-6d24f6d97612", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,29 +93,9 @@ namespace RatioAlphaTccV1._0.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Logo_Progama {
+        internal static System.Drawing.Bitmap Logo_transparente_boa {
             get {
-                object obj = ResourceManager.GetObject("Logo_Progama", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Logo_transparente {
-            get {
-                object obj = ResourceManager.GetObject("Logo_transparente", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Sem_título {
-            get {
-                object obj = ResourceManager.GetObject("Sem título", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_transparente_boa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

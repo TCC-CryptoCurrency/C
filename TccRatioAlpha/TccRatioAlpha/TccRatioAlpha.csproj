@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7E092DAB-AB29-4492-84BA-2808F7CDB7F9}</ProjectGuid>
+    <ProjectGuid>{E5A333C2-8900-481D-8B96-49FF1CB39424}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>RatioAlphaTccV1._0</RootNamespace>
-    <AssemblyName>RatioAlphaTccV1.0</AssemblyName>
+    <RootNamespace>TccRatioAlpha</RootNamespace>
+    <AssemblyName>TccRatioAlpha</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,22 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\frmLogin.cs">
+    <Compile Include="Cadastro.cs" />
+    <Compile Include="Dao\classeConexão.cs" />
+    <Compile Include="frm_Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="frm_Cadastro.Designer.cs">
+      <DependentUpon>frm_Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Splash.cs">
+    <Compile Include="UsuarioDAO.cs" />
+    <Compile Include="View\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Splash.Designer.cs">
-      <DependentUpon>Splash.cs</DependentUpon>
+    <Compile Include="View\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="View\Frm_Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Splash.Designer.cs">
+      <DependentUpon>Frm_Splash.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="View\frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="frm_Cadastro.resx">
+      <DependentUpon>frm_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Splash.resx">
+      <DependentUpon>Frm_Splash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,9 +89,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\Splash.resx">
-      <DependentUpon>Splash.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,26 +102,18 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <None Include="Res\Sem título.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Res\Logo_transparente.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dao\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Res\Logo_Progama.png" />
+    <None Include="Resources\ezgif-4-6d24f6d97612.gif" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-animada-shhhhhh-transparente.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo-animada-shhhhhh.gif" />
+    <None Include="Resources\Logo_transparente_boa.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ezgif-4-6d24f6d97612.gif" />
+    <None Include="Resources\btn_Login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
