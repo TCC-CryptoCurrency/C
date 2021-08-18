@@ -44,5 +44,13 @@ namespace TccRatioAlpha
             this.Show();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmMain a = new frmMain();
+            this.Hide();
+            a.ShowDialog();
+            this.Show();
+        }
     }
 }

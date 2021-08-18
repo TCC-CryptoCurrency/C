@@ -10,3 +10,7 @@ E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.exe
 E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.pdb
 E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.frm_Login.resources
 E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.frm_Cadastro.resources
+E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.frmMain.resources
+E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucMain.resources
+E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucModeloCadastro.resources
+E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucModeloConsulta.resources

@@ -46,15 +46,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastro.cs" />
-    <Compile Include="Dao\classeConexão.cs" />
-    <Compile Include="frm_Cadastro.cs">
+    <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Cadastro.Designer.cs">
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Cadastro.cs" />
+    <Compile Include="Dao\classeConexão.cs" />
+    <Compile Include="ucMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMain.Designer.cs">
+      <DependentUpon>ucMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucModeloCadastro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucModeloCadastro.Designer.cs">
+      <DependentUpon>ucModeloCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucModeloConsulta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucModeloConsulta.Designer.cs">
+      <DependentUpon>ucModeloConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_Cadastro.Designer.cs">
       <DependentUpon>frm_Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioDAO.cs" />
+    <Compile Include="Dao\UsuarioDAO.cs" />
     <Compile Include="View\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,7 +94,19 @@
     </Compile>
     <Compile Include="Model\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frm_Cadastro.resx">
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMain.resx">
+      <DependentUpon>ucMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucModeloCadastro.resx">
+      <DependentUpon>ucModeloCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucModeloConsulta.resx">
+      <DependentUpon>ucModeloConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_Cadastro.resx">
       <DependentUpon>frm_Cadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frm_Login.resx">

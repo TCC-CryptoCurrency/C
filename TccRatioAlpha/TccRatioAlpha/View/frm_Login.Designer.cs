@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_Cadastrar
@@ -133,6 +134,16 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Email";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(103, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Avançar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -140,7 +151,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(123)))), ((int)(((byte)(29)))));
             this.BackgroundImage = global::TccRatioAlpha.Properties.Resources.Logo_transparente_boa;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(289, 261);
+            this.ClientSize = new System.Drawing.Size(289, 340);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Cadastrar);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Login);
@@ -168,5 +180,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }
