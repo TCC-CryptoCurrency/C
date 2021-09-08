@@ -39,7 +39,7 @@
             this.txt_Data = new System.Windows.Forms.MaskedTextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txt_CPF = new System.Windows.Forms.MaskedTextBox();
+            this.txt_CPF = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -154,11 +154,10 @@
             // 
             // txt_CPF
             // 
-            this.txt_CPF.Location = new System.Drawing.Point(121, 193);
-            this.txt_CPF.Mask = "000.000.000-00";
+            this.txt_CPF.Location = new System.Drawing.Point(121, 190);
             this.txt_CPF.Name = "txt_CPF";
             this.txt_CPF.Size = new System.Drawing.Size(123, 20);
-            this.txt_CPF.TabIndex = 19;
+            this.txt_CPF.TabIndex = 20;
             // 
             // frm_Cadastro
             // 
@@ -202,6 +201,6 @@
         private System.Windows.Forms.MaskedTextBox txt_Data;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.MaskedTextBox txt_CPF;
+        private System.Windows.Forms.TextBox txt_CPF;
     }
 }

@@ -46,31 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroNoticia.cs" />
+    <Compile Include="CadastroTags.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Cadastro.cs" />
+    <Compile Include="Model\CadastroCliente.cs" />
     <Compile Include="Dao\classeConexão.cs" />
+    <Compile Include="NoticiaDao.cs" />
+    <Compile Include="TagsDao.cs" />
+    <Compile Include="ucCadastroNoticia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroNoticia.Designer.cs">
+      <DependentUpon>ucCadastroNoticia.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucMain.Designer.cs">
       <DependentUpon>ucMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucModeloCadastro.cs">
+    <Compile Include="ucCadastroCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucModeloCadastro.Designer.cs">
-      <DependentUpon>ucModeloCadastro.cs</DependentUpon>
+    <Compile Include="ucCadastroCliente.Designer.cs">
+      <DependentUpon>ucCadastroCliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucModeloConsulta.cs">
+    <Compile Include="ucConsultaCliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucModeloConsulta.Designer.cs">
-      <DependentUpon>ucModeloConsulta.cs</DependentUpon>
+    <Compile Include="ucConsultaCliente.Designer.cs">
+      <DependentUpon>ucConsultaCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frm_Cadastro.cs">
       <SubType>Form</SubType>
@@ -97,14 +107,17 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroNoticia.resx">
+      <DependentUpon>ucCadastroNoticia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucModeloCadastro.resx">
-      <DependentUpon>ucModeloCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="ucCadastroCliente.resx">
+      <DependentUpon>ucCadastroCliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucModeloConsulta.resx">
-      <DependentUpon>ucModeloConsulta.cs</DependentUpon>
+    <EmbeddedResource Include="ucConsultaCliente.resx">
+      <DependentUpon>ucConsultaCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frm_Cadastro.resx">
       <DependentUpon>frm_Cadastro.cs</DependentUpon>

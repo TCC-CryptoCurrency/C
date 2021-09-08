@@ -9,10 +9,11 @@ using System.Windows.Forms;
 
 namespace TccRatioAlpha
 {
-    class UsuarioDAO
+    class TagsDao
     {
         SqlConnection conn = classeConexão.obterConexao();
-        public void criarUsu(Cadastro cad)
+        SqlConnection conn1 = classeConexão.obterConexao();
+        public void criarTag(CadastroTags cad)
         {
             //conn = new SqlConnection(connString);
 
@@ -21,15 +22,10 @@ namespace TccRatioAlpha
                 try
                 {
                     // Insere na tbl Cliente
-                    string queryString = "INSERT INTO Usuario (Nome,Email,CPF,Senha,DataNasc,ChaveTemp,DataChave) VALUES (@1,@2,@3,@4,@5,@6,@7)";
+                    string queryString = "INSERT INTO Tags (NomeTag,DescTag) VALUES (@1,@2)";
                     SqlCommand cmd = new SqlCommand(queryString, conn);
                     cmd.Parameters.Add("@1", SqlDbType.NVarChar, 90).Value = cad.getNome();
-                    cmd.Parameters.Add("@2", SqlDbType.NVarChar, 90).Value = cad.getEmail();
-                    cmd.Parameters.Add("@3", SqlDbType.NVarChar, 90).Value = cad.getCpf();
-                    cmd.Parameters.Add("@4", SqlDbType.NVarChar, 90).Value = cad.getSenha();
-                    cmd.Parameters.Add("@5", SqlDbType.NVarChar, 90).Value = cad.getData();
-                    cmd.Parameters.Add("@6", SqlDbType.NVarChar, 90).Value = "A0c0d0";
-                    cmd.Parameters.Add("@7", SqlDbType.NVarChar, 90).Value = DateTime.Now.ToString("yyyy-MM-dd");
+                    cmd.Parameters.Add("@2", SqlDbType.NVarChar, 90).Value = cad.getDesc();
 
                     cmd.ExecuteScalar();
 
@@ -45,16 +41,16 @@ namespace TccRatioAlpha
                 }
             }
         }
-        public void atualizarUsu(Cadastro a)
+
+        public void atualizarTag(CadastroTags a)
         {
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Cliente SET Nome=@1, Email=@2, Cpf=@3, Senha=@4, DataNasc=@5 where idCarteira=@0", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE Tags SET NomeTag=@1, DescTag=@2 where idTags=@0", conn);
                 cmd.Parameters.AddWithValue("@1", a.getNome());
-                cmd.Parameters.AddWithValue("@2", a.getEmail());
-                cmd.Parameters.AddWithValue("@3", a.getCpf());
-                cmd.Parameters.AddWithValue("@4", a.getSenha());
+                cmd.Parameters.AddWithValue("@2", a.getDesc());
                 cmd.Parameters.AddWithValue("@0", a.getId());
+
 
                 cmd.CommandType = CommandType.Text;
                 //conn.Open();
@@ -76,13 +72,12 @@ namespace TccRatioAlpha
             }
         }
 
-        public void excluirUsu(int id)
+        public void excluirTags(int id)
         {
-            Cadastro cliente = new Cadastro();
-
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd1 = new SqlCommand("DELETE FROM Usuario WHERE idCarteira=@1", conn);
+                conn1.Open();
+                SqlCommand cmd1 = new SqlCommand("DELETE FROM Tags WHERE idTags=@1", conn1);
                 cmd1.Parameters.AddWithValue("@1", id);
 
 
@@ -100,40 +95,40 @@ namespace TccRatioAlpha
                 {
                     conn.Close();
                 }
+
+
             }
         }
-        public Cadastro listarUsu(int id)
+
+        public CadastroTags listarTags(int id)
         {
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("select * from Usuario where idCarteira = @id", conn);
+                SqlCommand cmd = new SqlCommand("select * from Tags where idTags = @id", conn);
+                SqlDataReader reader;
                 cmd.Parameters.AddWithValue("@id", id);
+                reader = cmd.ExecuteReader();
 
                 try
                 {
-                    Cadastro a = new Cadastro();
-                    SqlDataReader reader = cmd.ExecuteReader();
+                    CadastroTags a = new CadastroTags();
+                    
 
                     if (reader.Read())
                     {
 
-                        a.setId(id);
-
                         a.setId(int.Parse(reader[0].ToString()));
                         a.setNome(reader[1].ToString());
-                        a.setEmail(reader[2].ToString());
-                        a.setSenha(reader[6].ToString());
-                        a.setData(DateTime.Parse(reader[4].ToString()));
-                        a.setCpf(reader[5].ToString());
-                        a.setChave(reader[7].ToString());
-                        a.setDataChave(DateTime.Parse(reader[8].ToString()));
+                        a.setDesc(reader[2].ToString());
                         return a;
+
                     }
                     else
                     {
                         return null;
-                    }
 
+                    }
+                    
                 }
                 catch (Exception error)
                 {
@@ -143,6 +138,9 @@ namespace TccRatioAlpha
                 }
                 finally
                 {
+                    reader.Close();
+                    cmd.Dispose();
+                    conn1.Close();
                     classeConexão.fecharConexao();
                 }
             }
@@ -158,7 +156,7 @@ namespace TccRatioAlpha
 
             if (conn.State == ConnectionState.Open)
             {
-                string queryString = "select Max(idCarteira) from Usuario";
+                string queryString = "select Max(idTags) from Tags";
 
                 SqlCommand cmd = new SqlCommand(queryString, conn);
 
