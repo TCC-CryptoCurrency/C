@@ -15,3 +15,6 @@ E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucMain.resour
 E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucCadastroNoticia.resources
 E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucCadastroCliente.resources
 E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucConsultaCliente.resources
+E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucCadastroMoeda.resources
+E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucCadastroTransacao.resources
+E:\Tcc\C Local\TccRatioAlpha\TccRatioAlpha\obj\Debug\TccRatioAlpha.ucConUsuario.resources

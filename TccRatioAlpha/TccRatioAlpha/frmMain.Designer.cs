@@ -35,9 +35,10 @@
             this.btnSair = new System.Windows.Forms.Button();
             this.btnMC = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +55,7 @@
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(123)))), ((int)(((byte)(29)))));
+            this.panelMenu.Controls.Add(this.button2);
             this.panelMenu.Controls.Add(this.btnPrincipal);
             this.panelMenu.Controls.Add(this.btnMP);
             this.panelMenu.Controls.Add(this.btnSair);
@@ -65,7 +67,6 @@
             // 
             // btnPrincipal
             // 
-            this.btnPrincipal.Enabled = false;
             this.btnPrincipal.FlatAppearance.BorderSize = 0;
             this.btnPrincipal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrincipal.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,6 +132,17 @@
             this.panelTop.Size = new System.Drawing.Size(800, 85);
             this.panelTop.TabIndex = 24;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(123)))), ((int)(((byte)(29)))));
+            this.pictureBox1.BackgroundImage = global::TccRatioAlpha.Properties.Resources.Logo_transparente_boa;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(92, 96);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -157,16 +169,19 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox1
+            // button2
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(123)))), ((int)(((byte)(29)))));
-            this.pictureBox1.BackgroundImage = global::TccRatioAlpha.Properties.Resources.Logo_transparente_boa;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(92, 96);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Location = new System.Drawing.Point(512, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 30);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Consulta";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmMain
             // 
@@ -200,5 +215,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

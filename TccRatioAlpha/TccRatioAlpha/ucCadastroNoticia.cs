@@ -20,6 +20,7 @@ namespace TccRatioAlpha
         public ucCadastroNoticia()
         {
             InitializeComponent();
+            clTags.Items.Clear();
             listarTags();
         }
         public void listarTags()
@@ -47,12 +48,13 @@ namespace TccRatioAlpha
                 a.setDescricao(txtDesc.Text);
                 c.criarNoticia(a);
 
-                foreach (string itemchecked in clTags.CheckedItems)
+                foreach (string a in clTags.CheckedItems)
                 {
-                    d.setNome(itemchecked.ToString());
+                    d.setNome(a.ToString());
                     c.associarTag(d);
                 }
             }
+            MessageBox.Show("Registro inserido com sucesso!");
         }
     }
 }

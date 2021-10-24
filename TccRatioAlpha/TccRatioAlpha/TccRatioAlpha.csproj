@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroMoeda.cs" />
     <Compile Include="CadastroNoticia.cs" />
     <Compile Include="CadastroTags.cs" />
+    <Compile Include="CadastroTrans.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,13 +58,33 @@
     </Compile>
     <Compile Include="Model\CadastroCliente.cs" />
     <Compile Include="Dao\classeConexão.cs" />
+    <Compile Include="MoedaDAO.cs" />
     <Compile Include="NoticiaDao.cs" />
     <Compile Include="TagsDao.cs" />
+    <Compile Include="TransacaoDAO.cs" />
+    <Compile Include="ucCadastroMoeda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroMoeda.Designer.cs">
+      <DependentUpon>ucCadastroMoeda.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucCadastroNoticia.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucCadastroNoticia.Designer.cs">
       <DependentUpon>ucCadastroNoticia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCadastroTransacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroTransacao.Designer.cs">
+      <DependentUpon>ucCadastroTransacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConUsuario.Designer.cs">
+      <DependentUpon>ucConUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="ucMain.cs">
       <SubType>UserControl</SubType>
@@ -107,8 +129,17 @@
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroMoeda.resx">
+      <DependentUpon>ucCadastroMoeda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucCadastroNoticia.resx">
       <DependentUpon>ucCadastroNoticia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroTransacao.resx">
+      <DependentUpon>ucCadastroTransacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConUsuario.resx">
+      <DependentUpon>ucConUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>

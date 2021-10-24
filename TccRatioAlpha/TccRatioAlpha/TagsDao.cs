@@ -104,7 +104,7 @@ namespace TccRatioAlpha
         {
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("select * from Tags where idTags = @id", conn);
+                SqlCommand cmd = new SqlCommand("select * from Tags where idTags = @id", conn1);
                 SqlDataReader reader;
                 cmd.Parameters.AddWithValue("@id", id);
                 reader = cmd.ExecuteReader();
@@ -140,7 +140,6 @@ namespace TccRatioAlpha
                 {
                     reader.Close();
                     cmd.Dispose();
-                    conn1.Close();
                     classeConexão.fecharConexao();
                 }
             }

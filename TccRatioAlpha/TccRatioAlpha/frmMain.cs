@@ -18,11 +18,8 @@ namespace TccRatioAlpha
         }
 
         private void btnPrincipal_Click(object sender, EventArgs e)
-        {
-            Panel p = this.Parent as Panel;
-            var cadP = new ucMain();
+        { 
             panelPrincipal.Controls.Clear();
-            panelPrincipal.Controls.Add(cadP);
         }
 
         private void btnMP_Click(object sender, EventArgs e)
@@ -46,7 +43,15 @@ namespace TccRatioAlpha
         private void button1_Click(object sender, EventArgs e)
         {
             Panel p = this.Parent as Panel;
-            var cadP = new ucCadastroNoticia();
+            var cadP = new ucCadastroMoeda();
+            panelPrincipal.Controls.Clear();
+            panelPrincipal.Controls.Add(cadP);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Panel p = this.Parent as Panel;
+            var cadP = new ucConsultaCliente();
             panelPrincipal.Controls.Clear();
             panelPrincipal.Controls.Add(cadP);
         }

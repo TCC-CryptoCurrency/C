@@ -98,10 +98,6 @@
             // clTags
             // 
             this.clTags.FormattingEnabled = true;
-            this.clTags.Items.AddRange(new object[] {
-            "Bitcoin",
-            "Etherium",
-            "Elon Musk"});
             this.clTags.Location = new System.Drawing.Point(102, 168);
             this.clTags.Name = "clTags";
             this.clTags.Size = new System.Drawing.Size(186, 49);
