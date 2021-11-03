@@ -21,11 +21,12 @@ namespace TccRatioAlpha
                 try
                 {
                     // Insere na tbl Cliente
-                    string queryString = "INSERT INTO Moeda (NomeMoeda,ValorMoeda) VALUES (@1,@2)";
+                    string queryString = "INSERT INTO Moeda (NomeMoeda,ValorMoeda,DataAtualizacao) VALUES (@1,@2,@3)";
                     SqlCommand cmd = new SqlCommand(queryString, conn);
                     cmd.Parameters.Add("@1", SqlDbType.NVarChar, 90).Value = cad.getNome();
                     cmd.Parameters.Add("@2", SqlDbType.Money, 90).Value = cad.getValor();
-                        
+                    cmd.Parameters.Add("@3", SqlDbType.Date, 90).Value = DateTime.Now;
+
                     cmd.ExecuteScalar();
 
                     MessageBox.Show("Registro inserido com sucesso!");
@@ -45,9 +46,10 @@ namespace TccRatioAlpha
         {
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Moeda SET NomeMoeda=@1, ValorMoeda=@2 where idMoeda=@0", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE Moeda SET NomeMoeda=@1, ValorMoeda=@2, DataAtualizacao=@3 where idMoeda=@0", conn);
                 cmd.Parameters.AddWithValue("@1", a.getNome());
                 cmd.Parameters.AddWithValue("@2", a.getValor());
+                cmd.Parameters.AddWithValue("@3", DateTime.Now);
                 cmd.Parameters.AddWithValue("@0", a.getId());
 
                 cmd.CommandType = CommandType.Text;
@@ -115,6 +117,7 @@ namespace TccRatioAlpha
                         a.setId(int.Parse(reader[0].ToString()));
                         a.setNome(reader[1].ToString());
                         a.setValor(Double.Parse(reader[2].ToString()));
+                        a.setAttt(DateTime.Parse(reader[3].ToString()));
                         return a;
                     }
                     else

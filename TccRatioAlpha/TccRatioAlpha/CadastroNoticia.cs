@@ -10,6 +10,7 @@ namespace TccRatioAlpha
     {
         private int Id; 
         private string Titulo, Descricao;
+        private DateTime Data;
 
         public void setId(int id)
         {
@@ -36,6 +37,16 @@ namespace TccRatioAlpha
         public string getDescricao()
         {
             return Descricao;
+        }
+
+        public void setData(DateTime data)
+        {
+            Data = data;
+        }
+
+        public DateTime getData()
+        {
+            return Data;
         }
 
     }

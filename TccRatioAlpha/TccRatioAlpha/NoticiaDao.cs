@@ -24,10 +24,11 @@ namespace TccRatioAlpha
                 try
                 {
                     // Insere na tbl Cliente
-                    string queryString = "INSERT INTO Noticia (Titulo,DescNot) VALUES (@1,@2)";
+                    string queryString = "INSERT INTO Noticia (Titulo,DescNot,DataNot) VALUES (@1,@2)";
                     SqlCommand cmd = new SqlCommand(queryString, conn2);
                     cmd.Parameters.Add("@1", SqlDbType.NVarChar, 90).Value = cad.getTitulo();
                     cmd.Parameters.Add("@2", SqlDbType.NVarChar, 90).Value = cad.getDescricao();
+                    cmd.Parameters.Add("@3", SqlDbType.Date, 90).Value = DateTime.Now;
 
                     cmd.ExecuteScalar();
                 }
@@ -93,9 +94,10 @@ namespace TccRatioAlpha
         {
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Noticia SET Titulo=@1, DescNot=@2 where idNoticia=@0", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE Noticia SET Titulo=@1, DescNot=@2, DataNot=@3 where idNoticia=@0", conn);
                 cmd.Parameters.AddWithValue("@1", a.getTitulo());
                 cmd.Parameters.AddWithValue("@2", a.getDescricao());
+                cmd.Parameters.AddWithValue("@3", DateTime.Now);
                 cmd.Parameters.AddWithValue("@0", a.getId());
 
 
@@ -125,14 +127,17 @@ namespace TccRatioAlpha
 
             if (conn.State == ConnectionState.Open)
             {
+                SqlCommand cmd = new SqlCommand("DELETE FROM DetalheTagNoticia WHERE idNoticia=@1", conn);
                 SqlCommand cmd1 = new SqlCommand("DELETE FROM Noticia WHERE idNoticia=@1", conn);
+                cmd.Parameters.AddWithValue("@1", id);
                 cmd1.Parameters.AddWithValue("@1", id);
 
 
                 try
                 {
+                    int i = cmd1.ExecuteNonQuery();
                     int j = cmd1.ExecuteNonQuery();
-                    if (j > 0)
+                    if (j > 0 && i>0)
                         MessageBox.Show("Registro excluído com sucesso!");
                 }
                 catch (Exception ex)
@@ -168,6 +173,7 @@ namespace TccRatioAlpha
                         a.setId(int.Parse(reader[0].ToString()));
                         a.setTitulo(reader[1].ToString());
                         a.setDescricao(reader[2].ToString());
+                        a.setData(DateTime.Parse(reader[3].ToString()));
                         return a;
                     }
                     else

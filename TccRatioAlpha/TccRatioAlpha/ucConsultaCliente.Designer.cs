@@ -31,30 +31,24 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtChaveData = new System.Windows.Forms.TextBox();
-            this.txtChaveTemp = new System.Windows.Forms.TextBox();
             this.txtNasc = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.grdUsu = new System.Windows.Forms.DataGridView();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.IdCarteira = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NomeCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SenhaUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChaveTemp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataChave = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdUsu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,15 +82,6 @@
             this.txtId.Size = new System.Drawing.Size(120, 20);
             this.txtId.TabIndex = 62;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(254, 258);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 13);
-            this.label9.TabIndex = 72;
-            this.label9.Text = "Data da Chave";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -106,19 +91,10 @@
             this.label7.TabIndex = 70;
             this.label7.Text = "Data de Nascimento";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(254, 204);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 13);
-            this.label6.TabIndex = 69;
-            this.label6.Text = "Chave Temporaria";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 304);
+            this.label5.Location = new System.Drawing.Point(254, 258);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 68;
@@ -136,7 +112,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(254, 297);
+            this.label3.Location = new System.Drawing.Point(254, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 66;
@@ -150,20 +126,6 @@
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 65;
             this.label2.Text = "Nome Completo";
-            // 
-            // txtChaveData
-            // 
-            this.txtChaveData.Location = new System.Drawing.Point(245, 274);
-            this.txtChaveData.Name = "txtChaveData";
-            this.txtChaveData.Size = new System.Drawing.Size(174, 20);
-            this.txtChaveData.TabIndex = 61;
-            // 
-            // txtChaveTemp
-            // 
-            this.txtChaveTemp.Location = new System.Drawing.Point(245, 222);
-            this.txtChaveTemp.Name = "txtChaveTemp";
-            this.txtChaveTemp.Size = new System.Drawing.Size(174, 20);
-            this.txtChaveTemp.TabIndex = 60;
             // 
             // txtNasc
             // 
@@ -181,14 +143,14 @@
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(245, 318);
+            this.txtCPF.Location = new System.Drawing.Point(245, 224);
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(174, 20);
             this.txtCPF.TabIndex = 55;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(22, 321);
+            this.txtSenha.Location = new System.Drawing.Point(245, 274);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(186, 20);
             this.txtSenha.TabIndex = 57;
@@ -209,13 +171,24 @@
             this.emailUsuario,
             this.SenhaUsuario,
             this.cpfUsuario,
-            this.dataNasc,
-            this.ChaveTemp,
-            this.DataChave});
+            this.dataNasc});
             this.grdUsu.Location = new System.Drawing.Point(22, 3);
             this.grdUsu.Name = "grdUsu";
             this.grdUsu.Size = new System.Drawing.Size(542, 140);
             this.grdUsu.TabIndex = 64;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(477, 269);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(87, 27);
+            this.btnExcluir.TabIndex = 74;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // IdCarteira
             // 
@@ -247,30 +220,7 @@
             this.dataNasc.HeaderText = "Data de nascimento";
             this.dataNasc.Name = "dataNasc";
             // 
-            // ChaveTemp
-            // 
-            this.ChaveTemp.HeaderText = "Chave Atual";
-            this.ChaveTemp.Name = "ChaveTemp";
-            // 
-            // DataChave
-            // 
-            this.DataChave.HeaderText = "Data da Chave";
-            this.DataChave.Name = "DataChave";
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.FlatAppearance.BorderSize = 0;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(477, 269);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(87, 27);
-            this.btnExcluir.TabIndex = 74;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // ucModeloConsulta
+            // ucConsultaCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -278,22 +228,18 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtChaveData);
-            this.Controls.Add(this.txtChaveTemp);
             this.Controls.Add(this.txtNasc);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.grdUsu);
-            this.Name = "ucModeloConsulta";
+            this.Name = "ucConsultaCliente";
             this.Size = new System.Drawing.Size(600, 350);
             ((System.ComponentModel.ISupportInitialize)(this.grdUsu)).EndInit();
             this.ResumeLayout(false);
@@ -306,29 +252,23 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtChaveData;
-        private System.Windows.Forms.TextBox txtChaveTemp;
         private System.Windows.Forms.TextBox txtNasc;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView grdUsu;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdCarteira;
         private System.Windows.Forms.DataGridViewTextBoxColumn NomeCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn SenhaUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataNasc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChaveTemp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataChave;
-        private System.Windows.Forms.Button btnExcluir;
     }
 }

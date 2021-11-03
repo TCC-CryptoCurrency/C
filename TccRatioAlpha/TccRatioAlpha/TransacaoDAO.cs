@@ -25,7 +25,7 @@ namespace TccRatioAlpha
             {
                 try
                 {
-                    // Insere na tbl Cliente
+                    
                     string queryString = "INSERT INTO Transacao (Valor,DataTrans,Origem,TipoMoeda,Destino) VALUES (@1,@2,@3,@4,@5)";
                     SqlCommand cmd = new SqlCommand(queryString, conn);
                     cmd.Parameters.Add("@1", SqlDbType.NVarChar, 90).Value = cad.getValor();

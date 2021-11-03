@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace TccRatioAlpha
 {
-    public partial class ucConsultaCliente : UserControl
+    public partial class ucConsultaMoeda : UserControl
     {
-        UsuarioDAO consultaDao = new UsuarioDAO();
-        public ucConsultaCliente()
+        MoedaDAO consultaDao = new MoedaDAO();
+        public ucConsultaMoeda()
         {
             InitializeComponent();
             listarTable();
@@ -32,18 +32,17 @@ namespace TccRatioAlpha
 
             for (int i = 0; i <= count; i++)
             {
-                if (!(consultaDao.listarUsu(i) == null))
+                if (!(consultaDao.listarMoeda(i) == null))
                 {
-                    Cadastro a = consultaDao.listarUsu(i);
+                    CadastroMoeda a = consultaDao.listarMoeda(i);
 
                     grdUsu.Rows.Add();
 
                     grdUsu.Rows[aa].Cells[0].Value = a.getId();
                     grdUsu.Rows[aa].Cells[1].Value = a.getNome();
-                    grdUsu.Rows[aa].Cells[2].Value = a.getEmail();
-                    grdUsu.Rows[aa].Cells[3].Value = a.getSenha();
-                    grdUsu.Rows[aa].Cells[4].Value = a.getCpf();
-                    grdUsu.Rows[aa].Cells[5].Value = a.getData();
+                    grdUsu.Rows[aa].Cells[2].Value = a.getValor();
+                    grdUsu.Rows[aa].Cells[3].Value = a.getAtt();
+
 
                     aa++;
                 }
@@ -52,38 +51,32 @@ namespace TccRatioAlpha
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Cadastro a = new Cadastro();
+            CadastroMoeda a = new CadastroMoeda();
             a.setId(int.Parse(txtId.Text));
             a.setNome(txtNome.Text);
-            a.setEmail(txtEmail.Text);
-            a.setCpf(txtCPF.Text);
-            a.setSenha(txtSenha.Text);
-            a.setData(DateTime.Parse(txtNasc.Text));
+            a.setValor(Double.Parse(txtValor.Text));
+            a.setAttt(DateTime.Parse(txtAtt.Text));
 
-            consultaDao.atualizarUsu(a);
+            consultaDao.atualizarMoeda(a);
 
             listarTable();
 
             txtId.Clear();
-            txtEmail.Clear();
-            txtCPF.Clear();
             txtNome.Clear();
-            txtSenha.Clear();
-            txtNasc.Clear();
+            txtAtt.Clear();
+            txtValor.Clear();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            consultaDao.excluirUsu(int.Parse(txtId.Text));
+            consultaDao.excluirMoeda(int.Parse(txtId.Text));
 
             listarTable();
 
             txtId.Clear();
-            txtEmail.Clear();
-            txtCPF.Clear();
             txtNome.Clear();
-            txtSenha.Clear();
-            txtNasc.Clear();
+            txtAtt.Clear();
+            txtValor.Clear();
         }
     }
 }

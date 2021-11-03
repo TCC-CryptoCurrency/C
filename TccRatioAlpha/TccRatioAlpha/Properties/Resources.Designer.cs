@@ -63,6 +63,16 @@ namespace TccRatioAlpha.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _163723591_882752535990336_2617968670973070551_n {
+            get {
+                object obj = ResourceManager.GetObject("163723591_882752535990336_2617968670973070551_n", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btn_Login {
             get {
                 object obj = ResourceManager.GetObject("btn_Login", resourceCulture);

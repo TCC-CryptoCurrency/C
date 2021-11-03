@@ -11,6 +11,7 @@ namespace TccRatioAlpha
         private int Id;
         private string Nome ;
         private Double Valor;
+        private DateTime Att;
 
         public void setId(int id)
         {
@@ -38,6 +39,15 @@ namespace TccRatioAlpha
         public Double getValor()
         {
             return Valor;
+        }
+        public void setAttt(DateTime att)
+        {
+            Att = att;
+        }
+
+        public DateTime getAtt()
+        {
+            return Att;
         }
     }
 }

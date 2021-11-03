@@ -80,11 +80,17 @@
     <Compile Include="ucCadastroTransacao.Designer.cs">
       <DependentUpon>ucCadastroTransacao.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucConUsuario.cs">
+    <Compile Include="ucConsultaMoeda.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucConUsuario.Designer.cs">
-      <DependentUpon>ucConUsuario.cs</DependentUpon>
+    <Compile Include="ucConsultaMoeda.Designer.cs">
+      <DependentUpon>ucConsultaMoeda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConsultaNoticia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConsultaNoticia.Designer.cs">
+      <DependentUpon>ucConsultaNoticia.cs</DependentUpon>
     </Compile>
     <Compile Include="ucMain.cs">
       <SubType>UserControl</SubType>
@@ -138,8 +144,11 @@
     <EmbeddedResource Include="ucCadastroTransacao.resx">
       <DependentUpon>ucCadastroTransacao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucConUsuario.resx">
-      <DependentUpon>ucConUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="ucConsultaMoeda.resx">
+      <DependentUpon>ucConsultaMoeda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConsultaNoticia.resx">
+      <DependentUpon>ucConsultaNoticia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucMain.resx">
       <DependentUpon>ucMain.cs</DependentUpon>
@@ -182,7 +191,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\163723591_882752535990336_2617968670973070551_n.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ezgif-4-6d24f6d97612.gif" />
   </ItemGroup>

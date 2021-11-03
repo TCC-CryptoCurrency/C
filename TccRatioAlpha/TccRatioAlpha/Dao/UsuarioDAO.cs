@@ -12,6 +12,7 @@ namespace TccRatioAlpha
     class UsuarioDAO
     {
         SqlConnection conn = classeConexão.obterConexao();
+        SqlConnection conn2 = classeConexão.obterConexao();
         public void criarUsu(Cadastro cad)
         {
             //conn = new SqlConnection(connString);
@@ -21,15 +22,13 @@ namespace TccRatioAlpha
                 try
                 {
                     // Insere na tbl Cliente
-                    string queryString = "INSERT INTO Usuario (Nome,Email,CPF,Senha,DataNasc,ChaveTemp,DataChave) VALUES (@1,@2,@3,@4,@5,@6,@7)";
+                    string queryString = "INSERT INTO Usuario (Nome,Email,CPF,Senha,DataNasc) VALUES (@1,@2,@3,@4,@5)";
                     SqlCommand cmd = new SqlCommand(queryString, conn);
                     cmd.Parameters.Add("@1", SqlDbType.NVarChar, 90).Value = cad.getNome();
                     cmd.Parameters.Add("@2", SqlDbType.NVarChar, 90).Value = cad.getEmail();
                     cmd.Parameters.Add("@3", SqlDbType.NVarChar, 90).Value = cad.getCpf();
                     cmd.Parameters.Add("@4", SqlDbType.NVarChar, 90).Value = cad.getSenha();
                     cmd.Parameters.Add("@5", SqlDbType.NVarChar, 90).Value = cad.getData();
-                    cmd.Parameters.Add("@6", SqlDbType.NVarChar, 90).Value = "A0c0d0";
-                    cmd.Parameters.Add("@7", SqlDbType.NVarChar, 90).Value = DateTime.Now.ToString("yyyy-MM-dd");
 
                     cmd.ExecuteScalar();
 
@@ -104,50 +103,60 @@ namespace TccRatioAlpha
         }
         public Cadastro listarUsu(int id)
         {
-            if (conn.State == ConnectionState.Open)
+            try
             {
-                SqlCommand cmd = new SqlCommand("select * from Usuario where idCarteira = @id", conn);
-                cmd.Parameters.AddWithValue("@id", id);
-
-                try
+                if (conn.State == ConnectionState.Open)
                 {
-                    Cadastro a = new Cadastro();
+                    SqlCommand cmd = new SqlCommand("select * from Usuario where idCarteira = @id", conn);
+                    cmd.Parameters.AddWithValue("@id", id);
                     SqlDataReader reader = cmd.ExecuteReader();
 
-                    if (reader.Read())
+                    try
                     {
+                        Cadastro a = new Cadastro();
+                        
 
-                        a.setId(id);
+                        if (reader.Read())
+                        {
 
-                        a.setId(int.Parse(reader[0].ToString()));
-                        a.setNome(reader[1].ToString());
-                        a.setEmail(reader[2].ToString());
-                        a.setSenha(reader[6].ToString());
-                        a.setData(DateTime.Parse(reader[4].ToString()));
-                        a.setCpf(reader[5].ToString());
-                        a.setChave(reader[7].ToString());
-                        a.setDataChave(DateTime.Parse(reader[8].ToString()));
-                        return a;
+                            a.setId(id);
+
+                            a.setId(int.Parse(reader[0].ToString()));
+                            a.setNome(reader[1].ToString());
+                            a.setEmail(reader[2].ToString());
+                            a.setSenha(reader[6].ToString());
+                            a.setData(DateTime.Parse(reader[4].ToString()));
+                            a.setCpf(reader[5].ToString());
+                            return a;
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                        reader.Close();
+                        cmd.Dispose();
                     }
-                    else
+                    catch (Exception error)
                     {
+                        MessageBox.Show("Erro: " + error);
+
                         return null;
                     }
-
+                    finally
+                    {
+                        classeConexão.fecharConexao();
+                    }
                 }
-                catch (Exception error)
+                else
                 {
-                    MessageBox.Show("Erro: " + error);
-
+                    MessageBox.Show(conn.State.ToString());
                     return null;
                 }
-                finally
-                {
-                    classeConexão.fecharConexao();
-                }
             }
-            else
+            catch (Exception error)
             {
+                MessageBox.Show("Erro: " + error);
+
                 return null;
             }
 
@@ -173,7 +182,8 @@ namespace TccRatioAlpha
                             return Convert.ToInt32(reader[0]);
                         }
                     }
-
+                    cmd.Dispose();
+                    reader.Close();
                     return 0;
                 }
                 catch (Exception error)
@@ -184,6 +194,7 @@ namespace TccRatioAlpha
                 }
                 finally
                 {
+                   
                     classeConexão.fecharConexao();
                 }
             }
