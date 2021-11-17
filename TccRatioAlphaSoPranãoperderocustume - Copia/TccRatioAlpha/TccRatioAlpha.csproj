@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5A333C2-8900-481D-8B96-49FF1CB39424}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TccRatioAlpha</RootNamespace>
+    <AssemblyName>TccRatioAlpha</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CadastroMoeda.cs" />
+    <Compile Include="CadastroNoticia.cs" />
+    <Compile Include="CadastroTags.cs" />
+    <Compile Include="CadastroTrans.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\CadastroCliente.cs" />
+    <Compile Include="Dao\classeConexão.cs" />
+    <Compile Include="MoedaDAO.cs" />
+    <Compile Include="NoticiaDao.cs" />
+    <Compile Include="TagsDao.cs" />
+    <Compile Include="TransacaoDAO.cs" />
+    <Compile Include="ucCadastroMoeda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroMoeda.Designer.cs">
+      <DependentUpon>ucCadastroMoeda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCadastroNoticia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroNoticia.Designer.cs">
+      <DependentUpon>ucCadastroNoticia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCadastroTags.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroTags.Designer.cs">
+      <DependentUpon>ucCadastroTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCadastroTransacao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroTransacao.Designer.cs">
+      <DependentUpon>ucCadastroTransacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConsultaMoeda.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConsultaMoeda.Designer.cs">
+      <DependentUpon>ucConsultaMoeda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConsultaNoticia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConsultaNoticia.Designer.cs">
+      <DependentUpon>ucConsultaNoticia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConsultaTags.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConsultaTags.Designer.cs">
+      <DependentUpon>ucConsultaTags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConsultaTransação.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConsultaTransação.Designer.cs">
+      <DependentUpon>ucConsultaTransação.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucGrafico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucGrafico.Designer.cs">
+      <DependentUpon>ucGrafico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMain.Designer.cs">
+      <DependentUpon>ucMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucCadastroCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCadastroCliente.Designer.cs">
+      <DependentUpon>ucCadastroCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucConsultaCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucConsultaCliente.Designer.cs">
+      <DependentUpon>ucConsultaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frm_Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_Cadastro.Designer.cs">
+      <DependentUpon>frm_Cadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\UsuarioDAO.cs" />
+    <Compile Include="View\frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frm_Login.Designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Login.cs" />
+    <Compile Include="View\Frm_Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Frm_Splash.Designer.cs">
+      <DependentUpon>Frm_Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroMoeda.resx">
+      <DependentUpon>ucCadastroMoeda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroNoticia.resx">
+      <DependentUpon>ucCadastroNoticia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroTags.resx">
+      <DependentUpon>ucCadastroTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroTransacao.resx">
+      <DependentUpon>ucCadastroTransacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConsultaMoeda.resx">
+      <DependentUpon>ucConsultaMoeda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConsultaNoticia.resx">
+      <DependentUpon>ucConsultaNoticia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConsultaTags.resx">
+      <DependentUpon>ucConsultaTags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConsultaTransação.resx">
+      <DependentUpon>ucConsultaTransação.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucGrafico.resx">
+      <DependentUpon>ucGrafico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMain.resx">
+      <DependentUpon>ucMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCadastroCliente.resx">
+      <DependentUpon>ucCadastroCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucConsultaCliente.resx">
+      <DependentUpon>ucConsultaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_Cadastro.resx">
+      <DependentUpon>frm_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Frm_Splash.resx">
+      <DependentUpon>Frm_Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\163723591_882752535990336_2617968670973070551_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif-4-6d24f6d97612.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-animada-shhhhhh-transparente.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_transparente_boa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\branco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo laranja1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
