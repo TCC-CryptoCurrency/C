@@ -22,11 +22,12 @@ namespace TccRatioAlpha
                 try
                 {
                     // Insere na tbl Cliente
-                    string queryString = "INSERT INTO Noticia (Titulo,DescNot,DataNot) VALUES (@1,@2)";
+                    string queryString = "INSERT INTO Noticia (Titulo,DescNot,DataNot,LinkNot) VALUES (@1,@2,@3,@4)";
                     SqlCommand cmd = new SqlCommand(queryString, conn);
                     cmd.Parameters.Add("@1", SqlDbType.NVarChar, 90).Value = cad.getTitulo();
                     cmd.Parameters.Add("@2", SqlDbType.NVarChar, 90).Value = cad.getDescricao();
                     cmd.Parameters.Add("@3", SqlDbType.Date, 90).Value = DateTime.Now;
+                    cmd.Parameters.Add("@4", SqlDbType.NVarChar, 90).Value = cad.getLink();
 
                     cmd.ExecuteScalar();
                 }
@@ -116,10 +117,11 @@ namespace TccRatioAlpha
             conn = classeConexão.obterConexao();
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Noticia SET Titulo=@1, DescNot=@2, DataNot=@3 where idNoticia=@0", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE Noticia SET Titulo=@1, DescNot=@2, DataNot=@3, LinkNot where idNoticia=@0", conn);
                 cmd.Parameters.AddWithValue("@1", a.getTitulo());
                 cmd.Parameters.AddWithValue("@2", a.getDescricao());
                 cmd.Parameters.AddWithValue("@3", DateTime.Now);
+                cmd.Parameters.AddWithValue("@3", a.getLink());
                 cmd.Parameters.AddWithValue("@0", a.getId());
 
 
@@ -197,6 +199,7 @@ namespace TccRatioAlpha
                         a.setTitulo(reader[1].ToString());
                         a.setDescricao(reader[2].ToString());
                         a.setData(DateTime.Parse(reader[3].ToString()));
+                        a.setLink(reader[4].ToString());
                         return a;
                     }
                     else

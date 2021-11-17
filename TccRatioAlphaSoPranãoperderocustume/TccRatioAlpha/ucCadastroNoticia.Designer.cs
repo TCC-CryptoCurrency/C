@@ -35,6 +35,8 @@
             this.txtDesc = new System.Windows.Forms.RichTextBox();
             this.label = new System.Windows.Forms.Label();
             this.clTags = new System.Windows.Forms.CheckedListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtLink = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCad
@@ -82,14 +84,14 @@
             this.txtDesc.Location = new System.Drawing.Point(324, 86);
             this.txtDesc.MaxLength = 50;
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(185, 131);
+            this.txtDesc.Size = new System.Drawing.Size(185, 142);
             this.txtDesc.TabIndex = 60;
             this.txtDesc.Text = "";
             // 
             // label
             // 
             this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(174, 145);
+            this.label.Location = new System.Drawing.Point(174, 109);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(31, 13);
             this.label.TabIndex = 62;
@@ -98,15 +100,35 @@
             // clTags
             // 
             this.clTags.FormattingEnabled = true;
-            this.clTags.Location = new System.Drawing.Point(102, 168);
+            this.clTags.Location = new System.Drawing.Point(102, 132);
             this.clTags.Name = "clTags";
             this.clTags.Size = new System.Drawing.Size(186, 49);
             this.clTags.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(141, 188);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Link da Noticia";
+            // 
+            // txtLink
+            // 
+            this.txtLink.Location = new System.Drawing.Point(102, 208);
+            this.txtLink.MaxLength = 200;
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(186, 20);
+            this.txtLink.TabIndex = 64;
             // 
             // ucCadastroNoticia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtLink);
             this.Controls.Add(this.clTags);
             this.Controls.Add(this.label);
             this.Controls.Add(this.txtDesc);
@@ -130,5 +152,7 @@
         private System.Windows.Forms.RichTextBox txtDesc;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.CheckedListBox clTags;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtLink;
     }
 }

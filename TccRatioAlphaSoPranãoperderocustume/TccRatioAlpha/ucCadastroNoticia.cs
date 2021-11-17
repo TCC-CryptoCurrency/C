@@ -42,17 +42,24 @@ namespace TccRatioAlpha
         private void btnCad_Click(object sender, EventArgs e)
         {
 
-            if (!(txtTitulo.Text == "" || txtDesc.Text == ""))
+            if (!(txtTitulo.Text == "" || txtDesc.Text == "" || txtLink.Text == ""))
             {
                 a.setTitulo(txtTitulo.Text);
                 a.setDescricao(txtDesc.Text);
+                a.setLink(txtLink.Text);
                 c.criarNoticia(a);
-
                 foreach (string h in clTags.CheckedItems)
                 {
                     d.setNome(h.ToString());
-                    c.associarTag(d,a);
+                    c.associarTag(d, a);
                 }
+
+                txtDesc.Clear();
+                txtLink.Clear();
+                txtTitulo.Clear();
+            }
+            else {
+                MessageBox.Show("Erro", "preencha todas os campos");
             }
             MessageBox.Show("Registro inserido com sucesso!");
         }

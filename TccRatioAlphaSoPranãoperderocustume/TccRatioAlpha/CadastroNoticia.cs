@@ -9,7 +9,7 @@ namespace TccRatioAlpha
     class CadastroNoticia
     {
         private int Id = 0; 
-        private string Titulo, Descricao;
+        private string Titulo, Descricao,Link;
         private DateTime Data;
 
         public void setId(int id)
@@ -29,6 +29,17 @@ namespace TccRatioAlpha
         public string getTitulo() {
             return Titulo;
         }
+
+        public void setLink(string link)
+        {
+            Link = link;
+        }
+
+        public string getLink()
+        {
+            return Link;
+        }
+
 
         public void setDescricao(string descricao) {
             Descricao = descricao;
