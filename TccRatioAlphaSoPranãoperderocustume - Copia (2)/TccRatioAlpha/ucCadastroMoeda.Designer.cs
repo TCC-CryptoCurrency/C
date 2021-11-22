@@ -32,7 +32,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_Nome = new System.Windows.Forms.TextBox();
-            this.txt_Valor = new System.Windows.Forms.MaskedTextBox();
+            this.txt_Valor = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnCad
@@ -77,10 +77,10 @@
             // txt_Valor
             // 
             this.txt_Valor.Location = new System.Drawing.Point(318, 86);
-            this.txt_Valor.Mask = "$00000000.00";
             this.txt_Valor.Name = "txt_Valor";
-            this.txt_Valor.Size = new System.Drawing.Size(186, 20);
-            this.txt_Valor.TabIndex = 62;
+            this.txt_Valor.Size = new System.Drawing.Size(194, 20);
+            this.txt_Valor.TabIndex = 63;
+            this.txt_Valor.TextChanged += new System.EventHandler(this.txt_Valor_TextChanged);
             // 
             // ucCadastroMoeda
             // 
@@ -104,6 +104,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_Nome;
-        private System.Windows.Forms.MaskedTextBox txt_Valor;
+        private System.Windows.Forms.TextBox txt_Valor;
     }
 }
