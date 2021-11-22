@@ -96,7 +96,7 @@ namespace TccRatioAlpha
             this.txt_Senha.ForeColor = System.Drawing.Color.Black;
             this.txt_Senha.Location = new System.Drawing.Point(131, 210);
             this.txt_Senha.Name = "txt_Senha";
-            this.txt_Senha.Size = new System.Drawing.Size(180, 20);
+            this.txt_Senha.Size = new System.Drawing.Size(146, 20);
             this.txt_Senha.TabIndex = 12;
             this.txt_Senha.UseSystemPasswordChar = true;
             // 
@@ -185,14 +185,14 @@ namespace TccRatioAlpha
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Ebrima", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(286, 210);
+            this.button2.Location = new System.Drawing.Point(286, 206);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(25, 20);
+            this.button2.Size = new System.Drawing.Size(25, 26);
             this.button2.TabIndex = 19;
             this.button2.Text = "👁️";
             this.button2.UseVisualStyleBackColor = false;

@@ -32,5 +32,13 @@ namespace TccRatioAlpha
                 b.criarMoeda(a);
             }
         }
+
+        private void txt_Valor_TextChanged(object sender, EventArgs e)
+        {
+            string aux;
+            aux = txt_Valor.Text;
+
+            txt_Valor.Text = "R$" + aux;
+        }
     }
 }
