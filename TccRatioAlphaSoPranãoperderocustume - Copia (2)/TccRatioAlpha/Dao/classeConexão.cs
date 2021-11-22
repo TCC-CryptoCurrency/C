@@ -10,7 +10,7 @@ namespace TccRatioAlpha
 {
     class classeConexão
     {
-        private static string connString = "Server = localhost; Database = BancoTCC; Uid = sa; Pwd = 12345";
+        private static string connString = "Server = localhost; Database = BancoTCC; Uid = sa; Pwd = 123";
 
 
         // representa a conexão com o banco

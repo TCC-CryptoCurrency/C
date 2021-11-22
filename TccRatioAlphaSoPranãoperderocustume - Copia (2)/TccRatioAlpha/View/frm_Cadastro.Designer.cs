@@ -39,7 +39,7 @@
             this.txt_Data = new System.Windows.Forms.MaskedTextBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txt_CPF = new System.Windows.Forms.TextBox();
+            this.txt_CPF = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -128,7 +128,7 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(123)))), ((int)(((byte)(29)))));
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.btnCadastrar.FlatAppearance.BorderSize = 0;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Location = new System.Drawing.Point(45, 221);
@@ -154,17 +154,17 @@
             // 
             // txt_CPF
             // 
-            this.txt_CPF.Location = new System.Drawing.Point(121, 190);
+            this.txt_CPF.Location = new System.Drawing.Point(121, 193);
+            this.txt_CPF.Mask = "000.000.000-00";
             this.txt_CPF.Name = "txt_CPF";
             this.txt_CPF.Size = new System.Drawing.Size(123, 20);
-            this.txt_CPF.TabIndex = 20;
+            this.txt_CPF.TabIndex = 19;
             // 
             // frm_Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(123)))), ((int)(((byte)(29)))));
-            this.BackgroundImage = global::TccRatioAlpha.Properties.Resources.Logo_transparente_boa;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(213)))), ((int)(((byte)(217)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(284, 257);
             this.Controls.Add(this.txt_CPF);
@@ -201,6 +201,6 @@
         private System.Windows.Forms.MaskedTextBox txt_Data;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.TextBox txt_CPF;
+        private System.Windows.Forms.MaskedTextBox txt_CPF;
     }
 }

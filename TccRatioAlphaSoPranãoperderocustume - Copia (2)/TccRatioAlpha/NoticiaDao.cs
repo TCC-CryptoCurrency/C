@@ -117,11 +117,11 @@ namespace TccRatioAlpha
             conn = classeConexão.obterConexao();
             if (conn.State == ConnectionState.Open)
             {
-                SqlCommand cmd = new SqlCommand("UPDATE Noticia SET Titulo=@1, DescNot=@2, DataNot=@3, LinkNot where idNoticia=@0", conn);
+                SqlCommand cmd = new SqlCommand("UPDATE Noticia SET Titulo=@1, DescNot=@2, DataNot=@3, LinkNot=@4 where idNoticia=@0", conn);
                 cmd.Parameters.AddWithValue("@1", a.getTitulo());
                 cmd.Parameters.AddWithValue("@2", a.getDescricao());
                 cmd.Parameters.AddWithValue("@3", DateTime.Now);
-                cmd.Parameters.AddWithValue("@3", a.getLink());
+                cmd.Parameters.AddWithValue("@4", a.getLink());
                 cmd.Parameters.AddWithValue("@0", a.getId());
 
 
